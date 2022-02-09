@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="461.0" prefWidth="730.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.Controllers.AjouterLivreController">
+   <children>
+      <Group layoutX="196.0" layoutY="98.0">
+         <children>
+            <Label layoutY="7.0" text="Titre" textFill="#455556">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titre" layoutY="30.0" prefHeight="40.0" prefWidth="410.0">
+               <effect>
+                  <Blend />
+               </effect></TextField>
+         </children>
+      </Group>
+      <Group layoutX="196.0" layoutY="186.0">
+         <children>
+            <Label layoutY="7.0" text="Auteur" textFill="#455556">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="auteur" layoutY="30.0" prefHeight="40.0" prefWidth="410.0">
+               <effect>
+                  <Blend />
+               </effect></TextField>
+         </children>
+      </Group>
+      <Group layoutX="196.0" layoutY="272.0">
+         <children>
+            <Label layoutY="7.0" text="Disponnible" textFill="#455556">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+             <ComboBox fx:id="dispo" layoutY="29.0" prefHeight="40.0" prefWidth="410.0">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="Oui" />
+                         <String fx:value="Non" />
+                     </FXCollections>
+                 </items>
+                 <value>
+                     <String fx:value="Oui" />
+                 </value>
+             </ComboBox>
+         </children>
+      </Group>
+      <Button fx:id="boutonAjouter" layoutX="196.0" layoutY="370.0" mnemonicParsing="false" onAction="#ajouterLivre" prefHeight="43.0" prefWidth="410.0" text="Ajouter" textFill="WHITE" AnchorPane.topAnchor="370.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="47.0" prefHeight="28.0" prefWidth="730.0" text="Ajouter un livre" textFill="#455556">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

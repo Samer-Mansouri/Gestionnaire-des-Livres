@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="715.0" prefWidth="1038.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.Controllers.LoginController">
+   <children>
+      <BorderPane prefHeight="715.0" prefWidth="1038.0">
+         <left>
+            <VBox prefHeight="639.0" prefWidth="192.0" style="-fx-background-color: #253536;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <Pane prefHeight="800.0" prefWidth="758.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="255.0" layoutY="104.0" prefHeight="72.0" prefWidth="336.0" text="SE CONNECTER" textFill="#455556">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <Group layoutX="127.0" layoutY="233.0">
+                     <children>
+                        <Label text="Nom d'utilisateur" textFill="#253536">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="username" layoutX="-4.0" layoutY="38.0" prefHeight="45.0" prefWidth="600.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="123.0" layoutY="361.0">
+                     <children>
+                        <PasswordField fx:id="password" layoutY="40.0" prefHeight="45.0" prefWidth="600.0" />
+                        <Label layoutY="-3.0" text="Mot de Passe" textFill="#253536">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Button alignment="CENTER" layoutX="123.0" layoutY="504.0" mnemonicParsing="false" onAction="#seConnecter" prefHeight="50.0" prefWidth="600.0" text="  Se Connecter" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="84.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/login.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

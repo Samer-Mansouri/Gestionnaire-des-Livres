@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.Controllers.ImporterExcelController">
+   <children>
+      <Label alignment="CENTER" layoutX="82.0" layoutY="200.0" prefHeight="33.0" prefWidth="670.0" text="Importer un Fichier Excel" textFill="#455556">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="boutonImporter" layoutX="208.0" layoutY="292.0" mnemonicParsing="false" onAction="#importerFichierExcel" prefHeight="53.0" prefWidth="417.0" text=" Importer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="21.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/import.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="228.0" layoutY="249.0" text="Le fichier ne doit pas dépasser 100 lignes" textFill="#455556">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

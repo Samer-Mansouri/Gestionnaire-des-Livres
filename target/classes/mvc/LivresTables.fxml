@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<AnchorPane prefHeight="599.0" prefWidth="758.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mvc.Controllers.LivresTablesController">
+   <children>
+
+       <TableView fx:id="tbData" layoutX="16.0" layoutY="59.0" onMouseClicked="#cliqueIci" prefHeight="453.0" prefWidth="722.0" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="59.0">
+           <columns>
+               <TableColumn fx:id="id" prefWidth="111.0" text="ID" />
+               <TableColumn fx:id="titre" prefWidth="249.0" text="Titre" />
+               <TableColumn fx:id="auteur" prefWidth="75.0" text="Auteur" />
+               <TableColumn fx:id="disponnible" prefWidth="75.0" text="Disponnible" />
+           </columns>
+           <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+           </columnResizePolicy>
+       </TableView>
+       
+      <TextField fx:id="au" disable="true" layoutX="219.0" layoutY="544.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label layoutX="16.0" layoutY="527.0" text="Titre" textFill="#455556" />
+      <Button id="butt" fx:id="boutonSupprimer" layoutX="616.0" layoutY="544.0" mnemonicParsing="false" onAction="#supprimerLivre" prefHeight="25.0" prefWidth="134.0" text="Supprimer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="butt" fx:id="boutonMettreAJour" disable="true" layoutX="537.0" layoutY="544.0" mnemonicParsing="false" onAction="#mettreAJourLivre" prefHeight="25.0" prefWidth="69.0" text="Màj" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="searchField" layoutX="164.0" layoutY="23.0" prefHeight="25.0" prefWidth="570.0" />
+      <ComboBox fx:id="dis" disable="true" layoutX="429.0" layoutY="544.0" prefHeight="25.0" prefWidth="91.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Oui" />
+                  <String fx:value="Non" />
+              </FXCollections>
+          </items>
+          <value>
+              <String fx:value="Oui" />
+          </value>
+      </ComboBox>
+      <TextField fx:id="tit" disable="true" layoutX="16.0" layoutY="544.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label layoutX="219.0" layoutY="527.0" text="Auteur" textFill="#455556" />
+      <Label layoutX="429.0" layoutY="527.0" text="Disponnible" textFill="#455556" />
+      <Label layoutX="23.0" layoutY="28.0" text="Chercher des livres:" textFill="#455556" />
+   </children>
+
+</AnchorPane>
